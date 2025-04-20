@@ -5,15 +5,13 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-
 import { parseSearchParamsToObject } from "@/utils/QueryString";
 import ProductService from "@/service/ProductService";
 import { SyncLoader } from "react-spinners";
 import Star from "./Star";
-import Item from "./GridItem";
 import ListItem from "./ListItem";
 import GridItem from "./GridItem";
-import SearchBar from "./SearchBar";
+import TopBtn from "@/components/TopBtn";
 
 export type Product = {
   id: number;
@@ -119,7 +117,6 @@ export default function ProductList() {
     <div className="cus-container py-5 mx-auto">
       <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-5">
         <h1 className="text-2xl font-bold mb-4">상품리스트</h1>
-    
       </div>
       <div className="flex items-center justify-between mb-4">
         <p className="text-md font-semibold">총 {totalCount}개</p>
@@ -200,13 +197,7 @@ export default function ProductList() {
       {!isFetchingNextPage && !hasNextPage && allProducts.length > 0 && (
         <div className="py-10 text-center">더 이상 불러올 수 없습니다.</div>
       )}
-
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-[80px] right-[40px] text-sm bg-white border p-4 rounded-full shadow-lg hover:bg-blue-700 hover:text-white transition"
-      >
-        TOP
-      </button>
+      <TopBtn />
     </div>
   );
 }
