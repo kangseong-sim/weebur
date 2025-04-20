@@ -112,6 +112,6 @@ http://localhost:3000
 ## 🙌 Author
 
 - [kangseongsim](https://github.com/kangseong-sim)
-- Contact: you@example.com
+- Contact: stylesha34@gmail.com
 
 
