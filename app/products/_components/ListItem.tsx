@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Product, StarRating } from "./ProductList";
+import { StarRating } from "./ProductList";
 import { useRouter } from "next/navigation";
+import { Product } from "@/lib/type";
 
 type ItemProps = {
   product: Product;
@@ -34,7 +35,7 @@ const ListItem = ({ product }: ItemProps) => {
         <div className="flex items-center justify-start gap-1">
           {StarRating(product.rating)}
           <div className="text-sm text-gray-500">
-            ({product.reviews.length})
+            ({typeof product.reviews === "number" ? product.reviews : product.reviews.length})
           </div>
         </div>
       </div>
