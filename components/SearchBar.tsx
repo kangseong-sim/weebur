@@ -40,7 +40,7 @@ const SearchBar = () => {
       <div className="relative flex-1">
         <Input
           type="text"
-          placeholder="검색어 입력"
+          placeholder="검색어를 입력해주세요."
           size={46}
           autoComplete="off"
           value={search}
