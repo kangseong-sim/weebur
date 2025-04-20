@@ -12,15 +12,8 @@ import Star from "./Star";
 import ListItem from "./ListItem";
 import GridItem from "./GridItem";
 import TopBtn from "@/components/TopBtn";
+import { Product } from "@/lib/type";
 
-export type Product = {
-  id: number;
-  title: string;
-  description: string;
-  thumbnail: string;
-  rating: number;
-  reviews: Array<number>;
-};
 
 type ViewType = "list" | "grid";
 
