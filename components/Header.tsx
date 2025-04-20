@@ -1,5 +1,5 @@
 "use client";
-import SearchBar from "@/app/products/_components/SearchBar";
+import SearchBar from "@/components/SearchBar";
 import Image from "next/image";
 import Link from "next/link";
 
